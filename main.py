@@ -34,14 +34,11 @@ async def start(message):
     status = db.get_field("users", id, "status")  # получаем статус пользователя
     if not db.user_exist(id):#если пользователя нет в бд
         db.add_user(id)#добавляем
-    if status == 1:  # если пользователя нет в бд
+    if status == 11:  # если пользователя нет в бд
         db.add_project(id,message.text)
-        db.update_field("users", id, "status", 2)
+        db.update_field("users", id, "status", 12)
         await message.answer("Теперь, вписывай объекты списка")
-    if status == 1:  # если пользователя нет в бд
-        db.add_project(id,message.text)
-        db.update_field("users", id, "status", 2)
-        await message.answer("Теперь, вписывай объекты списка")
+
     #db.update_field("users", id, "status", 1) #изменяем статус пользователя
     await message.answer("Выбери вариант!", reply_markup=kb)#отправка сообщения с клавиатурой
 
@@ -53,7 +50,7 @@ async def start_call(call):
     if not db.user_exist(id):#если пользователя нет в бд
         db.add_user(id)#добавляем
     if call.data == "new_project":
-        db.update_field("users", id, "status",1)
+        db.update_field("users", id, "status",11)
         await call.message.answer("Впишите название списка:")
     if call.data == "projects":
         projects = db.get_all("project")
@@ -64,10 +61,13 @@ async def start_call(call):
                 await call.answer("Вы ещё не создали ничего!")
                 return
             await call.message.answer("Ваши проекты:")
-            kb2 = [[InlineKeyboardButton(text="Зайти", callback_data=f"object_{project_id}")]]
-            await call.message.answer(f"{project_name}", kb2)
+            await call.message.answer(f"{project_name}", [InlineKeyboardButton(text="Зайти", callback_data=f"object_{project_id}")])
     if "object_" in call.data:
-        print()
+        project_id = int(call.data[7:])
+        project_name = db.get_field("project",project_id,"project_name")
+        db.add_object(id,project_id,project_name)
+        await call.message.answer("Впишите название объекта:")
+
 
     if call.data == "user":
         await call.message.answer("Это находится в разработке")

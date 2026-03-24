@@ -16,6 +16,11 @@ class SQL:
         with self.connection:
             return self.cursor.execute(query, (user_id,project_name,))
 
+    def add_object(self, user_id, project_id, project_name):
+        query = "INSERT INTO objects (user_id, project_id, project_name) VALUES(?,?,?)"
+        with self.connection:
+            return self.cursor.execute(query, (user_id,project_id,project_name,))
+
 
     # Проверка, есть ли пользователь в БД
     def user_exist(self, id):
