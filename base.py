@@ -44,6 +44,23 @@ class SQL:
             if result:
                 return result
 
+    def get_objects_by_project(self, id, project_id):
+        query = f"SELECT id FROM objects WHERE project_id = {project_id}"
+        with self.connection:
+            result = self.cursor.execute(query).fetchall()
+            if result:
+                return result
+
+    def get_object_by_idk(self, project_id, project_name, user_id):
+        query = f"SELECT id FROM objects WHERE project_id = {project_id} AND project_name = {project_name} AND user_id = {user_id}"
+        with self.connection:
+            item = self.cursor.execute(query).fetchone()
+            if item:
+                return item [0]
+            else:
+                return -1
+
+
     # Обновить значение поля
     def update_field(self, table, id, field, value):
         query = f"UPDATE {table} SET {field} = ? WHERE id = ?"
