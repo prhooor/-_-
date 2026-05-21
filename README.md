@@ -45,7 +45,7 @@ user #пользователь
 Если используете GitHub:
 
 ```bash
-git clone https://github.com/ivan-artemev24/Python-1-Artemev
+git clone [https://github.com/ivan-artemev24/Python-1-Artemev](https://github.com/prhooor/-_-/blob/main/main.py)
 cd Python-1-Artemev
 ```
 
