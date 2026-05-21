@@ -9,7 +9,7 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 У бота очень простой дизайн и понятный интерфейс.
 ```
 ## Возможности:
-
+```
 -Создание списков
 
 -Рандомизация объектов списка
@@ -17,9 +17,9 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 -настройка шанса выпадения объекта из списка
 
 -Удаление объекта или списка
-
+```
 ## Структура:
-
+```
 Рандомизатор/
 
 ├── main.py           # Основной файл бота (хэндлеры, логика)
@@ -29,11 +29,13 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 ├── config.py         # Токен бота (создаётся вручную, не хранится в репозитории)
 
 └── db.db             # База данных SQLite
-
+```
 ## Базы данных:
-
+```
 object #объекты списков
 
 projects #списки
 
 user #пользователь
+
+```
