@@ -8,7 +8,7 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 У бота очень простой дизайн и понятный интерфейс.
 
-Возможности:
+##Возможности:
 
 -Создание списков
 
@@ -18,9 +18,10 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 -Удаление объекта или списка
 
-Структура:
+##Структура:
 
 Рандомизатор/
+
 ├── main.py           # Основной файл бота (хэндлеры, логика)
 
 ├── base.py           # Класс SQL для работы с базой данных
@@ -29,7 +30,7 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 └── db.db             # База данных SQLite
 
-Базы данных:
+##Базы данных:
 
 object #объекты списков
 
