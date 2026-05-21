@@ -1,6 +1,8 @@
 https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0wtcY/edit?usp=sharing
 
+
 Описание:
+
 
 Бот для рандомизации объектов которые вписывает пользователь.
 
@@ -8,7 +10,9 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 У бота очень простой дизайн и понятный интерфейс.
 
+
 Возможности:
+
 
 -Создание списков
 
@@ -18,7 +22,9 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 -Удаление объекта или списка
 
+
 Структура:
+
 
 Рандомизатор/
 ├── main.py           # Основной файл бота (хэндлеры, логика)
