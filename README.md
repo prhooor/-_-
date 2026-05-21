@@ -17,8 +17,11 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 
 Рандомизатор/
 ├── main.py           # Основной файл бота (хэндлеры, логика)
+
 ├── base.py           # Класс SQL для работы с базой данных
+
 ├── config.py         # Токен бота (создаётся вручную, не хранится в репозитории)
+
 └── db.db             # База данных SQLite
 
 Базы данных:
