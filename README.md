@@ -37,5 +37,61 @@ object #объекты списков
 projects #списки
 
 user #пользователь
-
 ```
+### 1. Клонирование / копирование проекта
+
+Если проект уже есть на рабочем столе, этот шаг можно пропустить.
+
+Если используете GitHub:
+
+```bash
+git clone https://github.com/ivan-artemev24/Python-1-Artemev
+cd Python-1-Artemev
+```
+
+### 2. Создание и активация виртуального окружения
+
+```powershell
+# Создать виртуальное окружение (папка venv появится в корне проекта)
+python -m venv venv
+
+# Активировать окружение
+.\venv\Scripts\Activate.ps1
+```
+
+При успешной активации в начале строки PowerShell появится префикс `(venv)`.
+
+> **Если PowerShell выдаёт ошибку выполнения скриптов**, выполните один раз:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+
+### 3. Установка зависимостей
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 4. Настройка токена
+
+Создайте файл `config.py` в корне проекта:
+
+```python
+TOKEN = "ваш_токен_от_BotFather"
+```
+
+Токен можно получить у [@BotFather](https://t.me/BotFather) в Telegram.
+
+### 5. Запуск бота
+
+```bash
+python main.py
+```
+
+Бот запустится в режиме long polling. Для остановки нажмите `Ctrl+C`.
+
+---
+
+
+
