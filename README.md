@@ -1,7 +1,6 @@
 https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0wtcY/edit?usp=sharing
 
 ### Описание:
----
 ```
 Бот для рандомизации объектов которые вписывает пользователь.
 
@@ -39,7 +38,6 @@ https://docs.google.com/presentation/d/1j75EkHYkMtfNzzc2ILzY-XW5usri6t76Oia-BQ0w
 | `project`| Списки для объектов                             |
 | `objects`| Объекты                                         |
 
----
 ### 1. Клонирование / копирование проекта
 
 Если проект уже есть на рабочем столе, этот шаг можно пропустить.
